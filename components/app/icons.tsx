@@ -168,3 +168,31 @@ export function SpinnerIcon({ className, ...props }: IconProps) {
     </Icon>
   );
 }
+
+export function TagIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M3.5 12.4V4.75c0-.69.56-1.25 1.25-1.25h7.65l8.1 8.1a1.75 1.75 0 0 1 0 2.48l-6.92 6.92a1.75 1.75 0 0 1-2.48 0Z" />
+      <circle cx="8.25" cy="8.25" r="1.25" />
+    </Icon>
+  );
+}
+
+export function BankOffIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M3.5 9 12 4l8.5 5M4 20h16M6.5 12v5M17.5 12v5M10.5 12v2" />
+      <path d="m3.5 3.5 17 17" />
+    </Icon>
+  );
+}
+
+export function ImageIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <rect x="3.5" y="4.5" width="17" height="15" rx="2.5" />
+      <circle cx="9" cy="10" r="1.5" />
+      <path d="m20.5 15.5-4.5-4.5-8.5 8.5" />
+    </Icon>
+  );
+}

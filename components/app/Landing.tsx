@@ -50,7 +50,7 @@ export function Landing({
   onSample,
 }: LandingProps) {
   return (
-    <div className="mx-auto w-full max-w-[1360px] page-x pt-5 pb-16 sm:pt-8 sm:pb-24">
+    <div className="mx-auto w-full max-w-[1360px] page-x pt-5 pb-10 sm:pt-8 sm:pb-12">
       <div className="grid gap-x-16 gap-y-12 lg:grid-cols-[minmax(0,27.5rem)_minmax(0,1fr)] xl:gap-x-20">
         <div className="min-w-0">
           <h1 className="text-[36px] leading-[1.04] font-semibold tracking-[-0.035em] text-balance sm:text-[46px]">
