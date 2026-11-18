@@ -56,10 +56,6 @@ export function Landing({
           <h1 className="text-[36px] leading-[1.04] font-semibold tracking-[-0.035em] text-balance sm:text-[46px]">
             See where your money went.
           </h1>
-          <p className="mt-4 max-w-[35rem] text-[16px] leading-[1.6] text-text-muted sm:mt-5 sm:text-[17px]">
-            Your AI agent adds up your income and spending. Paste its answer here and Flume draws the Sankey chart,
-            right in your browser. Free, with no sign&#8209;up, no bank login, and nothing uploaded.
-          </p>
 
           <ol className="mt-8 max-w-[35rem] space-y-7 sm:mt-10">
             <Step

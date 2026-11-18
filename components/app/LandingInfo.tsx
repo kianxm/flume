@@ -32,23 +32,29 @@ export function LandingInfo() {
     <>
       <section
         aria-labelledby="about-heading"
-        className="mt-20 grid items-center gap-x-16 gap-y-10 sm:mt-28 lg:grid-cols-[minmax(0,27.5rem)_minmax(0,1fr)] xl:gap-x-20"
+        className="mt-14 grid items-center gap-x-16 gap-y-10 border-t border-border pt-14 sm:mt-20 sm:pt-20 lg:grid-cols-[minmax(0,27.5rem)_minmax(0,1fr)] xl:gap-x-20"
       >
-        <div className="min-w-0">
+        {/* Text comes first in the source and on phones; on wide screens the
+            sketch takes the left column so it never stacks under the sample chart. */}
+        <div className="min-w-0 max-w-[38rem] lg:order-2">
           <h2 id="about-heading" className={sectionHeading}>
             A Sankey chart of your income and expenses
           </h2>
           <p className="mt-5 text-[16px] leading-[1.65] text-text-muted">
-            Flume is a free Sankey diagram maker for personal finance. It shows a month or a year of money as one
-            picture: every income source on the left, every spending category and savings goal on the right, and
-            what was left over.
+            Flume is a free Sankey diagram maker for personal finance. Your AI agent adds up your income and
+            spending, you paste its answer here, and Flume draws the chart right in your browser. No sign&#8209;up,
+            no bank login, nothing uploaded.
+          </p>
+          <p className="mt-4 text-[16px] leading-[1.65] text-text-muted">
+            The result is a month or a year of money as one picture: every income source on the left, every
+            spending category and savings goal on the right, and what was left over.
           </p>
           <p className="mt-4 text-[16px] leading-[1.65] text-text-muted">
             No agent? A CSV with the columns type, category, subcategory and amount works just as well.
           </p>
         </div>
 
-        <figure className="min-w-0 lg:pl-4">
+        <figure className="min-w-0 lg:order-1">
           <FlowSketch className="block h-auto w-full" />
           <figcaption className="mt-5 grid grid-cols-3 gap-3 pt-1 text-[13px] leading-[1.4] text-text-muted sm:text-[13.5px]">
             <span>
