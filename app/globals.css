@@ -234,3 +234,22 @@ dialog.sheet::backdrop {
     animation: fade-in 200ms ease both;
   }
 }
+
+/* ───────────────────────────── Scroll hint ─────────────────────────── */
+
+/* The arrow under the hero drifts down a few pixels to say "there is more". */
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-hint {
+    animation: scroll-hint 2.2s ease-in-out infinite;
+  }
+}
+
+@keyframes scroll-hint {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}

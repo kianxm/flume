@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import type { ParseIssue } from "@/lib/flume/types";
 import { ImportBox } from "./ImportBox";
 import { LandingInfo } from "./LandingInfo";
-import { LockIcon } from "./icons";
+import { ChevronDownIcon, LockIcon } from "./icons";
 import { PromptStep } from "./PromptStep";
 import { SamplePreview } from "./SamplePreview";
 
@@ -50,8 +50,12 @@ export function Landing({
   onSample,
 }: LandingProps) {
   return (
-    <div className="mx-auto w-full max-w-[1360px] page-x pt-5 pb-10 sm:pt-8 sm:pb-12">
-      <div className="grid gap-x-16 gap-y-12 lg:grid-cols-[minmax(0,27.5rem)_minmax(0,1fr)] xl:gap-x-20">
+    <div className="mx-auto w-full max-w-[1360px] page-x pb-10 sm:pb-12">
+      {/* On wide screens the hero fills the first screen (minus the 72px
+          header) with its content centered, so the rest of the page starts
+          below the fold; the arrow at the bottom says there is more. */}
+      <section className="flex flex-col pt-5 sm:pt-8 lg:min-h-[calc(100svh-72px)] lg:pt-2">
+        <div className="grid gap-x-16 gap-y-12 lg:my-auto lg:grid-cols-[minmax(0,27.5rem)_minmax(0,1fr)] xl:gap-x-20">
         <div className="min-w-0">
           <h1 className="text-[36px] leading-[1.04] font-semibold tracking-[-0.035em] text-balance sm:text-[46px]">
             See where your money went.
@@ -101,7 +105,23 @@ export function Landing({
         </div>
 
         <SamplePreview onOpen={onSample} className="self-start lg:sticky lg:top-6" />
-      </div>
+        </div>
+
+        <a
+          href="#about"
+          aria-label="More about Flume"
+          onClick={(event) => {
+            const target = document.getElementById("about");
+            if (!target) return;
+            event.preventDefault();
+            const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            target.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+          }}
+          className="mx-auto mt-4 mb-3 hidden size-11 shrink-0 items-center justify-center rounded-full text-text-faint transition-colors hover:text-text lg:flex"
+        >
+          <ChevronDownIcon size={22} className="scroll-hint" />
+        </a>
+      </section>
 
       <LandingInfo />
     </div>

@@ -31,8 +31,9 @@ export function LandingInfo() {
   return (
     <>
       <section
+        id="about"
         aria-labelledby="about-heading"
-        className="mt-14 grid items-center gap-x-16 gap-y-10 border-t border-border pt-14 sm:mt-20 sm:pt-20 lg:grid-cols-[minmax(0,27.5rem)_minmax(0,1fr)] xl:gap-x-20"
+        className="mt-16 grid scroll-mt-6 items-center gap-x-16 gap-y-10 sm:mt-24 lg:mt-0 lg:pt-24 lg:grid-cols-[minmax(0,27.5rem)_minmax(0,1fr)] xl:gap-x-20"
       >
         {/* Text comes first in the source and on phones; on wide screens the
             sketch takes the left column so it never stacks under the sample chart. */}
