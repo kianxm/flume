@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 import type { ParseIssue } from "@/lib/flume/types";
 import { ImportBox } from "./ImportBox";
+import { LandingInfo } from "./LandingInfo";
 import { LockIcon } from "./icons";
 import { PromptStep } from "./PromptStep";
 import { SamplePreview } from "./SamplePreview";
@@ -56,8 +57,8 @@ export function Landing({
             See where your money went.
           </h1>
           <p className="mt-4 max-w-[35rem] text-[16px] leading-[1.6] text-text-muted sm:mt-5 sm:text-[17px]">
-            Your AI agent adds up your income and spending. Paste its answer here and Flume draws the chart, right in
-            your browser. No sign&#8209;up, no bank login, nothing uploaded.
+            Your AI agent adds up your income and spending. Paste its answer here and Flume draws the Sankey chart,
+            right in your browser. No sign&#8209;up, no bank login, nothing uploaded.
           </p>
 
           <ol className="mt-8 max-w-[35rem] space-y-7 sm:mt-10">
@@ -105,6 +106,8 @@ export function Landing({
 
         <SamplePreview onOpen={onSample} className="self-start lg:sticky lg:top-6" />
       </div>
+
+      <LandingInfo />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
 import { STATE_STORAGE_KEY } from "@/lib/storage";
 import "./globals.css";
 
@@ -14,11 +15,39 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  // Absolute base for the social-share image URLs.
-  metadataBase: new URL("https://flumechart.vercel.app"),
-  title: "Flume — see where your money flows",
-  description:
-    "Turn your income and spending into a clean Sankey chart. Your AI agent prepares the data, Flume draws it. Nothing leaves your browser.",
+  metadataBase: new URL(SITE_URL),
+  title: { default: SITE_TITLE, template: `%s | ${SITE_NAME}` },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  category: "finance",
+  keywords: [
+    "Sankey chart",
+    "Sankey diagram maker",
+    "income and expenses chart",
+    "budget Sankey",
+    "spending visualization",
+    "personal finance chart",
+    "money flow diagram",
+  ],
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: SITE_NAME,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+  },
 };
 
 export const viewport: Viewport = {
