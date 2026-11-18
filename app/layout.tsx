@@ -14,6 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  // Absolute base for the social-share image URLs.
+  metadataBase: new URL("https://flumechart.vercel.app"),
   title: "Flume — see where your money flows",
   description:
     "Turn your income and spending into a clean Sankey chart. Your AI agent prepares the data, Flume draws it. Nothing leaves your browser.",
