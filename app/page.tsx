@@ -23,8 +23,11 @@ const structuredData = {
       applicationCategory: "FinanceApplication",
       operatingSystem: "Any",
       browserRequirements: "Requires JavaScript",
+      isAccessibleForFree: true,
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
       image: `${SITE_URL}/opengraph-image.png`,
       featureList: [
+        "Free to use, with no account or paid plan",
         "Sankey chart of income, expenses and savings",
         "Works from a CSV or a pasted AI agent reply",
         "Runs in the browser with no sign-up or bank login",

@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   category: "finance",
   keywords: [
     "Sankey chart",
+    "free Sankey chart maker",
     "Sankey diagram maker",
     "income and expenses chart",
     "budget Sankey",

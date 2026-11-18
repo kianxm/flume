@@ -16,9 +16,9 @@ export function LandingInfo() {
             A Sankey chart of your income and expenses
           </h2>
           <p className="mt-4 max-w-[35rem] text-[15px] leading-[1.6] text-text-muted">
-            Flume is a Sankey diagram maker for personal finance. It shows a month or a year of money as one
+            Flume is a free Sankey diagram maker for personal finance. It shows a month or a year of money as one
             picture: every income source on the left, every spending category and savings goal on the right, and
-            what was left over. There is nothing to install and no account to create.
+            what was left over. There is nothing to install, no account to create and nothing to pay.
           </p>
         </div>
 
